@@ -1,0 +1,24 @@
+{
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "printWidth": 160,
+    "semi": true,
+    "tabWidth": 4,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "overrides": [
+        {
+            "files": "*.json",
+            "options": {
+                "parser": "json",
+                "singleQuote": false
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ]
+}

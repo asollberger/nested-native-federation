@@ -1,0 +1,10 @@
+# Ignore artifacts:
+build
+coverage
+dist
+
+.angular
+.idea
+.vscode
+
+pnpm-lock.yaml
