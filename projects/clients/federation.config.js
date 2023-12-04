@@ -4,7 +4,8 @@ module.exports = withNativeFederation({
     name: 'clients',
 
     exposes: {
-        './Component': './projects/clients/src/app/app.component.ts'
+        './Component': './projects/clients/src/app/app.component.ts',
+        './routes': './projects/clients/src/app/app.routes.ts'
     },
 
     shared: {

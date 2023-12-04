@@ -35,6 +35,7 @@
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
                         "target": "home:esbuild:development",
+                        "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
                         "dev": true,
                         "port": 4201
@@ -137,6 +138,7 @@
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
                         "target": "navigation:esbuild:development",
+                        "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
                         "dev": true,
                         "port": 4202
@@ -239,6 +241,7 @@
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
                         "target": "accounts:esbuild:development",
+                        "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
                         "dev": true,
                         "port": 4203
@@ -341,6 +344,7 @@
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
                         "target": "clients:esbuild:development",
+                        "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
                         "dev": true,
                         "port": 4204
@@ -443,6 +447,7 @@
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
                         "target": "shell:esbuild:development",
+                        "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
                         "dev": true,
                         "port": 4200

@@ -5,6 +5,7 @@ module.exports = withNativeFederation({
 
     exposes: {
         './Component': './projects/accounts/src/app/app.component.ts',
+        './init': './projects/accounts/src/app/host-attributes.ts',
         './routes': './projects/accounts/src/app/app.routes.ts'
     },
 

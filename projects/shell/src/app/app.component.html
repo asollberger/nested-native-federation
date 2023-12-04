@@ -2,14 +2,13 @@
 
 <p>working routes:</p>
 <button type="button" routerLink="/home">home</button>
-<button type="button" routerLink="/navigation">nav</button>
-<button type="button" routerLink="/nav-simple">nav simple routes</button>
-<button type="button" routerLink="/account">direct account</button>
-<button type="button" routerLink="/client">direct client</button>
-<p>broken routes:</p>
+<button type="button" routerLink="/navigation">nav component</button>
 <button type="button" routerLink="/nav">nav routes</button>
 <button type="button" routerLink="/nav/accounts">account through nav</button>
 <button type="button" routerLink="/nav/clients">client through nav</button>
+
+<p>Activity: {{ activity }}</p>
+<button type="button" (click)="nextActivity()">next activity</button>
 
 <p>route result:</p>
 <router-outlet></router-outlet>

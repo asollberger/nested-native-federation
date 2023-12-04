@@ -1,8 +1,8 @@
 import { initFederation } from '@angular-architects/native-federation';
 
-// This works just fine when
+// This works just fine when started directly
 initFederation('/assets/navigation.federation.manifest.json')
-// initFederation()
+    // initFederation()
     .catch((err) => console.error(err))
     .then((_) => import('./bootstrap'))
     .catch((err) => console.error(err));
