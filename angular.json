@@ -19,7 +19,9 @@
             "architect": {
                 "build": {
                     "builder": "@angular-architects/native-federation:build",
-                    "options": {},
+                    "options": {
+                        "polyfills": []
+                    },
                     "configurations": {
                         "production": {
                             "target": "home:esbuild:production"
@@ -34,11 +36,9 @@
                 "serve": {
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
-                        "target": "home:esbuild:development",
-                        "proxyConfig": "proxy.conf.json",
+                        "target": "home:serve-original:development",
                         "rebuildDelay": 0,
-                        "dev": true,
-                        "port": 4201
+                        "dev": true
                     }
                 },
                 "extract-i18n": {
@@ -59,7 +59,7 @@
                     }
                 },
                 "esbuild": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "outputPath": "dist/home",
                         "index": "projects/home/src/index.html",
@@ -69,7 +69,7 @@
                         "assets": ["projects/home/src/favicon.ico", "projects/home/src/assets"],
                         "styles": ["projects/home/src/styles.scss"],
                         "scripts": [],
-                        "main": "projects/home/src/main.ts"
+                        "browser": "projects/home/src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -99,10 +99,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "home:build:production"
+                            "buildTarget": "home:esbuild:production"
                         },
                         "development": {
-                            "buildTarget": "home:build:development"
+                            "buildTarget": "home:esbuild:development",
+                            "proxyConfig": "proxy.conf.json",
+                            "port": 4401
                         }
                     },
                     "defaultConfiguration": "development"
@@ -122,7 +124,9 @@
             "architect": {
                 "build": {
                     "builder": "@angular-architects/native-federation:build",
-                    "options": {},
+                    "options": {
+                        "polyfills": []
+                    },
                     "configurations": {
                         "production": {
                             "target": "navigation:esbuild:production"
@@ -137,11 +141,10 @@
                 "serve": {
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
-                        "target": "navigation:esbuild:development",
+                        "target": "navigation:serve-original:development",
                         "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
-                        "dev": true,
-                        "port": 4202
+                        "dev": true
                     }
                 },
                 "extract-i18n": {
@@ -162,7 +165,7 @@
                     }
                 },
                 "esbuild": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "outputPath": "dist/navigation",
                         "index": "projects/navigation/src/index.html",
@@ -172,7 +175,7 @@
                         "assets": ["projects/navigation/src/favicon.ico", "projects/navigation/src/assets"],
                         "styles": ["projects/navigation/src/styles.scss"],
                         "scripts": [],
-                        "main": "projects/navigation/src/main.ts"
+                        "browser": "projects/navigation/src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -202,10 +205,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "navigation:build:production"
+                            "buildTarget": "navigation:esbuild:production"
                         },
                         "development": {
-                            "buildTarget": "navigation:build:development"
+                            "buildTarget": "navigation:esbuild:development",
+                            "proxyConfig": "proxy.conf.json",
+                            "port": 4402
                         }
                     },
                     "defaultConfiguration": "development"
@@ -225,7 +230,9 @@
             "architect": {
                 "build": {
                     "builder": "@angular-architects/native-federation:build",
-                    "options": {},
+                    "options": {
+                        "polyfills": []
+                    },
                     "configurations": {
                         "production": {
                             "target": "accounts:esbuild:production"
@@ -240,11 +247,10 @@
                 "serve": {
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
-                        "target": "accounts:esbuild:development",
+                        "target": "accounts:serve-original:development",
                         "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
-                        "dev": true,
-                        "port": 4203
+                        "dev": true
                     }
                 },
                 "extract-i18n": {
@@ -265,7 +271,7 @@
                     }
                 },
                 "esbuild": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "outputPath": "dist/accounts",
                         "index": "projects/accounts/src/index.html",
@@ -275,7 +281,7 @@
                         "assets": ["projects/accounts/src/favicon.ico", "projects/accounts/src/assets"],
                         "styles": ["projects/accounts/src/styles.scss"],
                         "scripts": [],
-                        "main": "projects/accounts/src/main.ts"
+                        "browser": "projects/accounts/src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -305,10 +311,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "accounts:build:production"
+                            "buildTarget": "accounts:esbuild:production"
                         },
                         "development": {
-                            "buildTarget": "accounts:build:development"
+                            "buildTarget": "accounts:esbuild:development",
+                            "proxyConfig": "proxy.conf.json",
+                            "port": 4403
                         }
                     },
                     "defaultConfiguration": "development"
@@ -328,7 +336,9 @@
             "architect": {
                 "build": {
                     "builder": "@angular-architects/native-federation:build",
-                    "options": {},
+                    "options": {
+                        "polyfills": []
+                    },
                     "configurations": {
                         "production": {
                             "target": "clients:esbuild:production"
@@ -343,11 +353,10 @@
                 "serve": {
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
-                        "target": "clients:esbuild:development",
+                        "target": "clients:serve-original:development",
                         "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
-                        "dev": true,
-                        "port": 4204
+                        "dev": true
                     }
                 },
                 "extract-i18n": {
@@ -368,7 +377,7 @@
                     }
                 },
                 "esbuild": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "outputPath": "dist/clients",
                         "index": "projects/clients/src/index.html",
@@ -378,7 +387,7 @@
                         "assets": ["projects/clients/src/favicon.ico", "projects/clients/src/assets"],
                         "styles": ["projects/clients/src/styles.scss"],
                         "scripts": [],
-                        "main": "projects/clients/src/main.ts"
+                        "browser": "projects/clients/src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -408,10 +417,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "clients:build:production"
+                            "buildTarget": "clients:esbuild:production"
                         },
                         "development": {
-                            "buildTarget": "clients:build:development"
+                            "buildTarget": "clients:esbuild:development",
+                            "proxyConfig": "proxy.conf.json",
+                            "port": 4404
                         }
                     },
                     "defaultConfiguration": "development"
@@ -431,7 +442,9 @@
             "architect": {
                 "build": {
                     "builder": "@angular-architects/native-federation:build",
-                    "options": {},
+                    "options": {
+                        "polyfills": []
+                    },
                     "configurations": {
                         "production": {
                             "target": "shell:esbuild:production"
@@ -446,11 +459,10 @@
                 "serve": {
                     "builder": "@angular-architects/native-federation:build",
                     "options": {
-                        "target": "shell:esbuild:development",
+                        "target": "shell:serve-original:development",
                         "proxyConfig": "proxy.conf.json",
                         "rebuildDelay": 0,
-                        "dev": true,
-                        "port": 4200
+                        "dev": true
                     }
                 },
                 "extract-i18n": {
@@ -471,7 +483,7 @@
                     }
                 },
                 "esbuild": {
-                    "builder": "@angular-devkit/build-angular:browser-esbuild",
+                    "builder": "@angular-devkit/build-angular:application",
                     "options": {
                         "outputPath": "dist/shell",
                         "index": "projects/shell/src/index.html",
@@ -481,7 +493,7 @@
                         "assets": ["projects/shell/src/favicon.ico", "projects/shell/src/assets"],
                         "styles": ["projects/shell/src/styles.scss"],
                         "scripts": [],
-                        "main": "projects/shell/src/main.ts"
+                        "browser": "projects/shell/src/main.ts"
                     },
                     "configurations": {
                         "production": {
@@ -511,10 +523,12 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "shell:build:production"
+                            "buildTarget": "shell:esbuild:production"
                         },
                         "development": {
-                            "buildTarget": "shell:build:development"
+                            "buildTarget": "shell:esbuild:development",
+                            "proxyConfig": "proxy.conf.json",
+                            "port": 4400
                         }
                     },
                     "defaultConfiguration": "development"

@@ -1,6 +1,6 @@
 {
-    "home": "http://localhost:4201/remoteEntry.json",
-    "navigation": "http://localhost:4202/remoteEntry.json",
-    "accounts": "http://localhost:4203/remoteEntry.json",
-    "clients": "http://localhost:4204/remoteEntry.json"
+    "home": "http://localhost:4401/remoteEntry.json",
+    "navigation": "http://localhost:4402/remoteEntry.json",
+    "accounts": "http://localhost:4403/remoteEntry.json",
+    "clients": "http://localhost:4404/remoteEntry.json"
 }

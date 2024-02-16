@@ -8,6 +8,6 @@ export class ShellService {
     constructor(private _httpClient: HttpClient) {}
 
     getActivity() {
-        return this._httpClient.get<{ activity: string }>('/api/activity');
+        return this._httpClient.get<{ activity: string }>('/api/activity/');
     }
 }

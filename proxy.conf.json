@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "https://www.boredapi.com/api",
+        "target": "http://www.boredapi.com",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"
