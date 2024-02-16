@@ -28,7 +28,13 @@
                         },
                         "development": {
                             "target": "home:esbuild:development",
-                            "dev": true
+                            "dev": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/home/src/environments/environment.ts",
+                                    "with": "projects/home/src/environments/environment.development.ts"
+                                }
+                            ]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -133,7 +139,13 @@
                         },
                         "development": {
                             "target": "navigation:esbuild:development",
-                            "dev": true
+                            "dev": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/navigation/src/environments/environment.ts",
+                                    "with": "projects/navigation/src/environments/environment.development.ts"
+                                }
+                            ]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -239,7 +251,13 @@
                         },
                         "development": {
                             "target": "accounts:esbuild:development",
-                            "dev": true
+                            "dev": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/accounts/src/environments/environment.ts",
+                                    "with": "projects/accounts/src/environments/environment.development.ts"
+                                }
+                            ]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -345,7 +363,13 @@
                         },
                         "development": {
                             "target": "clients:esbuild:development",
-                            "dev": true
+                            "dev": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/clients/src/environments/environment.ts",
+                                    "with": "projects/clients/src/environments/environment.development.ts"
+                                }
+                            ]
                         }
                     },
                     "defaultConfiguration": "production"
@@ -514,7 +538,13 @@
                         "development": {
                             "optimization": false,
                             "extractLicenses": false,
-                            "sourceMap": true
+                            "sourceMap": true,
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/shell/src/environments/environment.ts",
+                                    "with": "projects/shell/src/environments/environment.development.ts"
+                                }
+                            ]
                         }
                     },
                     "defaultConfiguration": "production"
